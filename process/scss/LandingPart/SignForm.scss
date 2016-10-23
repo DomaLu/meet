@@ -1,0 +1,163 @@
+.sign-form {
+  background-color: transparent;
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  margin: auto;
+  width: 90%;
+  height: 80%;
+  max-width: 400px;
+  max-height: 480px;
+  // animation-duration: .8s;
+
+  @extend %animated;
+  @extend %fadeIn;
+
+  animation-delay: .6s;
+}
+
+//Shared
+.sign-form-nickname, .sign-form-email, .sign-form-password {
+  display: flex;
+  flex-wrap: nowrap;
+  justify-content: flex-start;
+  border-radius: 6px;
+  transition: .3s;
+  margin: 22px 1px 0;
+
+  &:hover {
+    > label, > i {
+      border-color: $inActive;
+      color: $inActive;
+    }
+    > input {
+      border-color: $inActive;
+    }
+  }
+  > input:focus {
+    border-color: $inActive;
+  }
+}
+
+.nickname-input, .email-input, .password-input {
+  order: 2;
+  font-size: $smFz;
+  color: $font;
+  padding-left: 4px;
+  flex: 1;
+  cursor: pointer;
+  transition: .3s;
+  border-radius: 0 6px 6px 0;
+  border: 1px solid $border;
+  border-left: 0;
+  &:focus + label {
+    border-color: $inActive;
+    color: $inActive;
+  }
+}
+
+
+.nickname-icon, .email-icon, .password-icon, .eye-closed, .eye-opened {
+  @extend %icon;
+  line-height: 36px;
+  text-align: center;
+  color: $border;
+  background-color: $bgContain;
+  transition: .3s;
+  cursor: pointer;
+  border: 1px solid $border;
+}
+
+.nickname-icon, .email-icon, .password-icon {
+  max-width: 35px;
+  flex: 1;
+  order: 1;
+  border-right: 0;
+  border-radius:6px 0 0 6px;
+}
+
+
+.nickname-icon {
+  @extend %member-3;
+  font-size: $mdFz;
+}
+
+.email-icon {
+  @extend %mail-4;
+  position: relative;
+  width: 35px;
+  height: 36px;
+  font-size: 40px;
+  &:before {
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: -2px;
+    margin: auto;
+  }
+
+}
+
+.password-icon {
+  @extend %password-1;
+  font-size: 20px;
+}
+
+
+.eye-closed, .eye-opened {
+  @extend %icon;
+  display: flex;
+  width: 37px;
+  order: 3;
+  border-radius: 0 6px 6px 0;
+  border-left: 0;
+  position: relative;
+  &:before {
+    width: 35px;
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    margin: auto;
+  }
+}
+
+.eye-closed {
+  @extend %eye-closed-1;
+  &:before{
+    top: -1px;
+  }
+}
+.eye-opened {
+  @extend %eye-opened-1;
+  &:before{
+    top: 1px;
+  }
+}
+
+
+.sign-form .submit-btn {
+  margin: 7% 1px 0;
+  width: 100%;
+  max-width: 398px;
+  height: 38px;
+  line-height: 40px;
+  border: 1px solid $active1;
+  color: $active1;
+}
+
+.sign-form .note {
+  text-align: center;
+  font-size: 14px;
+  color: $inActive;
+}
+
+@media (min-width: 1080px) {
+  .sign-form {
+    top: -50px;
+  }
+}

@@ -1,0 +1,13 @@
+.sign-form .submit-btn:disabled {
+  color: $hightLight;
+  border-color: $hightLight;
+  cursor: default;
+  // background-color: $bgBody;
+}
+
+.submit-btn {
+  word-spacing: -3px;
+  border-radius: 6px;
+  font-weight: 700;
+  background-color: $bgContain;
+}

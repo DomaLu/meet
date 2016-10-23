@@ -1,0 +1,54 @@
+.member-panel {
+  display: none;
+  position: absolute;
+  top: 8px;
+  right: 2%;
+  cursor: pointer;
+  @extend %animated;
+  @extend  %fadeInDown;
+
+
+  > .member-nickname {
+    float: left;
+    max-width: 220px;
+    margin-right: 5px;
+    height: 40px;
+    line-height: 44px;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+  }
+
+  .hi {
+    display: inline-block;
+  }
+
+  &:hover {
+    .hi {
+      color: $active1;
+    }
+
+    > .member-avatar {
+      float: left;
+      box-shadow: $bsh;
+    }
+  }
+}
+
+.login  .member-panel {
+  display: block;
+}
+
+
+@media (max-width: 768px) {
+  .member-panel  {
+    > .member-nickname {
+        max-width: 120px;
+      }
+
+      .hi {
+        display: none;
+      }
+
+    }
+}

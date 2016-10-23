@@ -1,0 +1,53 @@
+.sign-tabs {
+  display: flex;
+  flex-wrap: nowrap;
+  text-align: center;
+
+  > a {
+    border: 1px solid $border;
+    color: $inActive;
+    height: 36px;
+    line-height: 40px;
+    background-color: $bgContain;
+    font-weight: 700;
+    word-spacing: -3px;
+
+    &:hover {
+      border-color: $inActive;
+    }
+  }
+
+  .tab-sign-in {
+    flex: 1;
+    border-radius: 6px 0 0 6px;
+    border-right-color: transparent;
+    &:hover {
+      border-right-color: transparent;
+    }
+  }
+
+  .tab-sign-up  {
+    margin-right: 1px;
+    flex: 1;
+    border-radius: 0 6px 6px 0;
+    border-left-color: transparent;
+    &:hover {
+      border-left-color: transparent;
+    }
+  }
+
+}
+
+
+.sign-tabs > .active{
+  color: $active1;
+  border-color: $active1;
+  box-shadow: none;
+
+  &:hover {
+    border-color: $active1;
+    color: $active1;
+    background-color: $bgContain;
+  }
+
+}
